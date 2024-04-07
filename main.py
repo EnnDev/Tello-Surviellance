@@ -16,6 +16,6 @@ drone.streamon()
 while True:
     img = drone.get_frame_read().frame
     img = cv2.resize(img, (640,360))
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # This is needed for color correction
     cv2.imshow("Image",img)
     cv2.waitKey(1)
